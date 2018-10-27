@@ -12,7 +12,7 @@ const apply_file_system_commands = require('./storage_cmd.js')
 const API_TOKEN = '612287060:AAH-OC6B4vajeGfF2sZrDBwFmhJmAUtcziM'
 //const API_TOKEN = '352679604:AAElR92UVDYwXAseAlgh_V9Q7LbqteC8ieo'
 const PORT = process.env.PORT || 3000;
-const URL = process.env.URL || 'https://altclubschyderbot.herokuapp.com';
+const URL = process.env.URL || 'https://git.heroku.com/altbotschneider.git';
 const bot = new Telegraf(API_TOKEN)
 
 bot.telegram.getMe().then((botInfo) => {
@@ -30,11 +30,11 @@ bot.command('fraco',function (ctx) {
 })
 
 bot.command('start',function (ctx) {
-  ctx.reply("Oi bucetuda, eu sou um bot pra fazer umas parada la pra moderacao (akeles corno kkkkkk)\nUse /ajuda pra falar cmg, gata")
+  ctx.reply("Ola confrade, eu sou um bot pra fazer umas parada la pra moderacao (akeles corno kkkkkk)\nUse /ajuda pra ler uns comandos, confrade")
 })
 
 bot.command('ajuda',function (ctx) {
-  var data = ["use /grupos para ver os grupos de cada board do brchan em telegram",
+  var data = ["use /grupos para ver os canais ou /search [palavra] para procurar um comando",
               "Lurk MOAR"]
   ctx.reply(data.join("\n"))
 })

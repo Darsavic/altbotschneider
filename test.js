@@ -11,7 +11,7 @@ const apply_file_system_commands = require('./storage_cmd.js')
 //const API_TOKEN = '385790782:AAE-avQo986H5wpFKT05VwZz2VVwK-K7fng'
  const API_TOKEN = '612287060:AAH-OC6B4vajeGfF2sZrDBwFmhJmAUtcziM'
 const PORT = process.env.PORT || 3000;
-const URL = process.env.URL || 'https://altclubschyderbot.herokuapp.com';
+const URL = process.env.URL || 'https://git.heroku.com/altbotschneider.git';
 const bot = new Telegraf(API_TOKEN)
 
 var frases_aleatorias = []
@@ -29,7 +29,7 @@ bot.command('start',function (ctx) {
 })
 
 bot.command('ajuda',function (ctx) {
-  var data = ["use /grupos para ver os grupos de cada board do brchan em telegram",
+  var data = ["use /grupos para ver os grupos de cada board do altclub em telegram",
               "Lurk MOAR"]
   ctx.reply(data.join("\n"))
 })
