@@ -1,5 +1,4 @@
-
-
+//Bot criado pelo Filipe do br chan e modificado por mim. 
 const messages = require('./messages.js')
 const apply_cuzinho_middelware = require('./cuzinho_taken.js')
 const Telegraf = require('telegraf')
