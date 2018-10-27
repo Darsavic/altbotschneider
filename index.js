@@ -12,7 +12,7 @@ const apply_file_system_commands = require('./storage_cmd.js')
 const API_TOKEN = '612287060:AAH-OC6B4vajeGfF2sZrDBwFmhJmAUtcziM'
 //const API_TOKEN = '352679604:AAElR92UVDYwXAseAlgh_V9Q7LbqteC8ieo'
 const PORT = process.env.PORT || 3000;
-const URL = process.env.URL || 'https://git.heroku.com/altbotschneider.git';
+const URL = process.env.URL || 'https://altclubschyderbot.herokuapp.com';
 const bot = new Telegraf(API_TOKEN)
 
 bot.telegram.getMe().then((botInfo) => {
