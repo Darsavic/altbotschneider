@@ -1,3 +1,6 @@
+
+const TelegramBot = require('node-telegram-bot-api')
+// chance de erro
 const messages = require('./messages.js')
 const apply_cuzinho_middelware = require('./cuzinho_taken.js')
 const Telegraf = require('telegraf')
@@ -18,7 +21,7 @@ const bot = new Telegraf(API_TOKEN)
 bot.on('new_chat_members', (msg) => {
   bot.sendMessage(msg.chat.id, `Olá ${msg.from.first_name}, bem vindo ao ao altclub`)
 })
-
+// chance de erro
 bot.telegram.getMe().then((botInfo) => {
   bot.options.username = botInfo.username
 })
