@@ -15,6 +15,10 @@ const PORT = process.env.PORT || 8080;
 const URL = process.env.URL || 'https://altclubschyderbot.herokuapp.com';
 const bot = new Telegraf(API_TOKEN)
 
+bot.on('new_chat_members', (msg) => {
+  bot.sendMessage(msg.chat.id, `Olá ${msg.from.first_name}, bem vindo ao ao altclub`)
+})
+
 bot.telegram.getMe().then((botInfo) => {
   bot.options.username = botInfo.username
 })
